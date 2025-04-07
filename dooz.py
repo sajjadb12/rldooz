@@ -130,6 +130,7 @@ def main():
             running = False
         if not running:
             screen.blit(text_info, (width // 3, height // 3))
+            running = True
         if warning_shown:
             screen.blit(text_invalid, info_box)
         # flip() the display to put your work on screen
