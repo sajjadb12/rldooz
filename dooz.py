@@ -125,11 +125,11 @@ def main():
             screen.blit(text_owon, info_box)
             running = False
 
-        if np.all(board):
+        if np.all(board) and not has_won(1, board) and not has_won(2, board):
             screen.blit(text_gameover, info_box)
             running = False
         if not running:
-            screen.blit(text_info, (width // 3, height // 3))
+            screen.blit(text_info, (width // 3, height -20))
             running = True
         if warning_shown:
             screen.blit(text_invalid, info_box)
